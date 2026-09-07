@@ -4,7 +4,7 @@ This repository contains the Week 4 unsupervised-learning analysis of Sentinel-3
 
 ## Aim
 
-The task is to classify altimetry echoes into sea ice and leads, compare the result with the ESA surface-type classification, and examine the average waveform shape and standard deviation for both classes.
+The task is to classify altimetry echoes into sea ice and leads, compare the result with the ESA surface-type classification using a confusion matrix, and examine the average waveform shape and standard deviation for both classes.
 
 ## Method
 
@@ -30,21 +30,20 @@ The GMM classified 12,195 valid echoes:
 - sea ice: 8,880
 - lead: 3,315
 
-The comparison with ESA classification produced the following confusion matrix:
+The confusion matrix was:
 
 | ESA classification | GMM sea ice | GMM lead |
 |---|---:|---:|
 | Sea ice | 8,856 | 22 |
 | Lead | 24 | 3,293 |
 
-Overall agreement with the ESA classification was 99.62%.
+There were 12,149 agreements and 46 disagreements, giving 99.62% agreement with the ESA classification.
 
 The mean waveform comparison shows a broader and lower-amplitude mean response for sea ice and a sharper, higher-amplitude mean peak for leads. The lead class also has a wider standard-deviation envelope.
 
 ## Files
 
 - `notebooks/Week4_Sentinel3_Altimetry_Classification.ipynb` contains the complete analysis.
-- `figures/Week4_confusion_matrix.png` shows the GMM comparison with ESA classification.
 - `figures/Week4_average_echo_shapes.png` shows the mean waveform and standard-deviation envelope for sea ice and leads.
 - `requirements.txt` lists the Python packages used.
 
